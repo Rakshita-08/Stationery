@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Stationery</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: Arial;
+        }
+
+        body {
+            margin: 0;
+            background: #f5f3ff;
+        }
+
+        header {
+            background: #8e7cc3;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        nav {
+            background: #2d3436;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 12px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #6c5ce7;
+            margin: 30px;
+        }
+
+        .items {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            padding: 10px 30px;
+        }
+
+        .item {
+            width: 220px;
+            background: white;
+            padding: 15px;
+            text-align: center;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px #ccc;
+        }
+
+        .item img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+            background: #eee;
+        }
+
+        .price {
+            color: #6c5ce7;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        button {
+            background: #6c5ce7;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #4834d4;
+        }
+
+        footer {
+            margin-top: 40px;
+            background: #2d3436;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>🎓 Students</h1>
+    <p>Simple. Classic. Useful.</p>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="student.html">Student</a>
+    <a href="kids.html">Kids</a>
+    <a href="office.html">Office</a>
+    <a href="offers.html">Offers</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+<a href="cart2.html">
+    🛒 Cart (<span class="cart-count">0</span>)
+</a>
+
+
+
+</nav>
+
+<h2>📚 Student & College Stationery</h2>
+
+<div class="items">
+
+    <!-- 1 -->
+    <div class="item">
+        <img src="ball.jfif" alt="Ball Pen">
+        <h3>Ball Pen</h3>
+        <p class="price">₹10</p>
+       <button onclick="addToCart(this)">Buy Now</button>
+
+    </div>
+
+    <!-- 2 -->
+    <div class="item">
+        <img src="gel.jfif" alt="Gel Pen">
+        <h3>Gel Pen</h3>
+        <p class="price">₹15</p>
+        <button onclick="addToCart(this)">Buy Now</button>
+
+    </div>
+
+    <!-- 3 -->
+    <div class="item">
+        <img src="hb.jfif"alt="HB Pencil">
+        <h3>HB Pencil</h3>
+        <p class="price">₹10</p>
+         <button onclick="addToCart(this)">Buy Now</button>
+
+    </div>
+
+    
+
+    <!-- 5 -->
+    <div class="item">
+        <img src="e.jfif" alt="Eraser">
+        <h3>Eraser</h3>
+        <p class="price">₹5</p>
+        <button onclick="addToCart(this)">Buy Now</button>
+
+    </div>
+
+    <!-- 6 -->
+    <div class="item">
+        <img src="s.jfif" alt="Sharpener">
+        <h3>Sharpener</h3>
+        <p class="price">₹5</p>
+      <button onclick="addToCart(this)">Buy Now</button>
+
+    </div>
+
+    <!-- 7 -->
+    <div class="item">
+        <img src="h.jfif" alt="Highlighter">
+        <h3>Highlighter</h3>
+        <p class="price">₹25</p>
+       <button onclick="addToCart(this)">Buy Now</button>
+
+    </div>
+
+    <!-- 8 -->
+    <div class="item">
+        <img src="mar.jfif" alt="Black Marker">
+        <h3>Black Marker</h3>
+        <p class="price">₹10</p>
+        <button onclick="addToCart(this)">Buy Now</button>
+
+    </div>
+
+    <!-- 9 -->
+    <div class="item">
+        <img src="long.jfif"
+ alt="Class Notebook">
+        <h3>Class Notebook</h3>
+        <p class="price">₹45</p>
+     <button onclick="addToCart(this)">Buy Now</button>
+
+    </div>
+
+    <!-- 11 -->
+    <div class="item">
+        <img src="prac.jfif"
+ alt="Practical Record Book">
+        <h3>Practical Record Book</h3>
+        <p class="price">₹65</p>
+     <button onclick="addToCart(this)">Buy Now</button>
+
+    </div>
+
+    <!-- 12 -->
+    <div class="item">
+        <img src="prfil.jfif"alt="Project File">
+        <h3>Project File</h3>
+        <p class="price">₹35</p>
+        <button onclick="addToCart(this)">Buy Now</button>
+
+    </div>
+
+    <!-- 13 -->
+    <div class="item">
+        <img src="long.jfif"alt="Assignment File">
+        <h3>Classmate Notebook</h3>
+        <p class="price">₹45</p>
+        <button onclick="addToCart(this)">Buy Now</button>
+
+    </div>
+
+    <!-- 14 -->
+    <div class="item">
+        <img src="sheet.jfif"
+ alt="A4 Sheets">
+        <h3>A4 Sheets</h3>
+        <p class="price">₹120</p>
+       <button onclick="addToCart(this)">Buy Now</button>
+
+    </div>
+
+    <!-- 15 -->
+    <div class="item">
+        <img src="snote.jfif" alt="Sticky Notes">
+        <h3>Sticky Notes</h3>
+        <p class="price">₹60</p>
+       <button onclick="addToCart(this)">Buy Now</button>
+
+    </div>
+
+    <!-- 16 -->
+    <div class="item">
+        <img src="pad.jfif" alt="Exam pad">
+        <h3>Exam Pad</h3>
+        <p class="price">₹135</p>
+       <button onclick="addToCart(this)">Buy Now</button>
+
+    </div>
+
+    <!-- 17 -->
+    <div class="item">
+        <img src="bmark.jfif" alt="Bookmark">
+        <h3>Bookmark</h3>
+        <p class="price">₹35</p>
+        <button onclick="addToCart(this)">Buy Now</button>
+
+    </div>
+
+    <!-- 18 -->
+    <div class="item">
+        <img src="geo.jfif"
+ alt="Geometry Box">
+        <h3>Geometry Box</h3>
+        <p class="price">₹150</p>
+        <button onclick="addToCart(this)">Buy Now</button>
+
+    </div>
+
+    <!-- 19 -->
+    <div class="item">
+        <img src="srule.jfif"alt="Ruler">
+        <h3>Ruler</h3>
+        <p class="price">₹15</p>
+         <button onclick="addToCart(this)">Buy Now</button>
+
+    </div>
+
+    <!-- 20 -->
+    <div class="item">
+        <img src="basic.jfif"
+ alt="Calculator">
+        <h3>Calculator</h3>
+        <p class="price">₹250</p>
+        <button onclick="addToCart(this)">Buy Now</button>
+
+    </div>
+
+    <!-- 21 -->
+    <div class="item">
+        <img src="stap.jfif"
+ alt="Stapler">
+        <h3>Stapler</h3>
+        <p class="price">₹60</p>
+       <button onclick="addToCart(this)">Buy Now</button>
+
+    </div>
+
+    <!-- 22 -->
+    <div class="item">
+        <img src="spinb.jfif"
+alt="Stapler Pins">
+        <h3>Stapler Pins</h3>
+        <p class="price">₹25</p>
+      <button onclick="addToCart(this)">Buy Now</button>
+
+    </div>
+
+    <!-- 23 -->
+    <div class="item">
+        <img src="paperclip.jfif"
+alt="Paper Clips">
+        <h3>Paper Clips</h3>
+        <p class="price">₹20</p>
+        <button onclick="addToCart(this)">Buy Now</button>
+
+    </div>
+
+    <!-- 24 -->
+    <div class="item">
+        <img src="coll.jfif" alt="Binder Clips">
+        <h3>College Bag</h3>
+        <p class="price">₹500</p>
+        <button onclick="addToCart(this)">Buy Now</button>
+
+    </div>
+
+    <!-- 25 -->
+    <div class="item">
+        <img src="glue.jfif"
+ alt="Glue Stick">
+        <h3>Glue Stick</h3>
+        <p class="price">₹25</p>
+        <button onclick="addToCart(this)">Buy Now</button>
+
+    </div>
+
+    <!-- 26 -->
+    <div class="item">
+        <img src="bott.jfif" alt="Correction Pen">
+        <h3>WaterBottle</h3>
+        <p class="price">₹250</p>
+        <button onclick="addToCart(this)">Buy Now</button>
+
+    </div>
+
+    <!-- 27 -->
+    <div class="item">
+        <img src="fi.jfif"alt="File Folder">
+        <h3>File Folder</h3>
+        <p class="price">₹60</p>
+         <button onclick="addToCart(this)">Buy Now</button>
+
+    </div>
+
+    <!-- 28 -->
+    <div class="item">
+        <img src="docf.jfif" alt="Document Folder">
+        <h3>Document Folder</h3>
+        <p class="price">₹45</p>
+       <button onclick="addToCart(this)">Buy Now</button>
+
+    </div>
+
+    <!-- 29 -->
+    <div class="item">
+        <img src="lun.jfif" alt="Lunch Box">
+        <h3>Lunch box</h3>
+        <p class="price">₹350</p>
+     <button onclick="addToCart(this)">Buy Now</button>
+
+    </div>
+
+    <!-- 30 -->
+    <div class="item">
+        <img src="spi.jfif"alt="Spiral Notebook">
+        <h3>Spiral Notebook</h3>
+        <p class="price">₹80</p>
+         <button onclick="addToCart(this)">Buy Now</button>
+
+    </div>
+
+</div>
+
+<footer>
+    <p>© 2026 PaperNest Stationery</p>
+</footer>
+<script src="wishlist.js"></script>
+<script src="cart2.js"></script>
+
+</body>
+</html>

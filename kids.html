@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kids Stationery</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: Arial;
+        }
+
+        body {
+            margin: 0;
+            background: #fff0f6;
+        }
+
+        header {
+            background: #fd79a8;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+ 
+         
+
+        nav {
+            background: #2d3436;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 12px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #e84393;
+            margin: 30px;
+        }
+
+        .items {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            padding: 10px 30px;
+        }
+
+        .item {
+            width: 220px;
+            background: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 20px;
+            box-shadow: 0 4px 10px #ccc;
+        }
+
+        /* Product image */
+        .emoji {
+            width: 100%;
+            height: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            border-radius: 15px;
+        }
+
+        .emoji img {
+            width: 130px;
+            height: 130px;
+            object-fit: contain;
+        }
+
+        .price {
+            color: #e84393;
+            font-weight: bold;
+        }
+
+        button {
+            background: #fd79a8;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #e84393;
+        }
+
+        footer {
+            margin-top: 40px;
+            background: #2d3436;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+  
+
+
+<header>
+    <h1>🧒 Kids Corner</h1>
+    <p>Colorful. Fun. Creative.</p>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="student.html">Student</a>
+    <a href="kids.html">Kids</a>
+    <a href="office.html">Office</a>
+    <a href="offers.html">Offers</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+<a href="cart2.html">
+    🛒 Cart (<span class="cart-count">0</span>)
+</a>
+
+</nav>
+
+<h2>🎨 Kids Stationery Items</h2>
+
+<div class="items">
+
+    <div class="item">
+        <div class="emoji">
+            <img src="fpencil.jfif" alt="Fancy Pencil">
+        </div>
+        <h3>Fancy Pencil</h3>
+        <p class="price">₹20</p>
+           <button onclick="addToCart(this)">Buy Now</button>
+
+
+    </div>
+
+    <div class="item">
+        <div class="emoji">
+            <img src="crayon.jfif" alt="Crayon Set">
+        </div>
+        <h3>Crayon Set</h3>
+        <p class="price">₹25</p>
+        <button onclick="addToCart(this)">Buy Now</button>
+
+
+    </div>
+
+    <div class="item">
+        <div class="emoji">
+            <img src="cpencil.jfif" alt="Colour Pencil Set">
+        </div>
+        <h3>Colour Pencil Set</h3>
+        <p class="price">₹60</p>
+          <button onclick="addToCart(this)">Buy Now</button>
+
+
+    </div>
+
+    <div class="item">
+        <div class="emoji">
+            <img src="ferasor.jfif" alt="Fancy Eraser">
+        </div>
+        <h3>Fancy Eraser</h3>
+        <p class="price">₹5 per</p>
+       <button onclick="addToCart(this)">Buy Now</button>
+
+
+    </div>
+
+    <div class="item">
+        <div class="emoji">
+            <img src="fsharp.jfif" alt="Fancy Sharpener">
+        </div>
+        <h3>Fancy Sharpener</h3>
+        <p class="price">₹10</p>
+       <button onclick="addToCart(this)">Buy Now</button>
+
+
+    </div>
+
+    <div class="item">
+        <div class="emoji">
+            <img src="kbag.jfif" alt="School bag">
+        </div>
+        <h3>Kids school bag</h3>
+        <p class="price">₹450</p>
+         <button onclick="addToCart(this)">Buy Now</button>
+
+
+    </div>
+
+    <div class="item">
+        <div class="emoji">
+            <img src="kgel.jfif" alt="Kids Gel Pen">
+        </div>
+        <h3>Kids Gel Pen</h3>
+        <p class="price">₹10 per</p>
+          <button onclick="addToCart(this)">Buy Now</button>
+
+
+    </div>
+
+    <div class="item">
+        <div class="emoji">
+            <img src="spen.jfif" alt="Sketch Pens">
+        </div>
+        <h3>Sketch Pens</h3>
+        <p class="price">₹40</p>
+          <button onclick="addToCart(this)">Buy Now</button>
+
+
+    </div>
+
+    <div class="item">
+        <div class="emoji">
+            <img src="pen.jfif"" alt="Glitter Pens">
+        </div>
+        <h3>Glitter Pens</h3>
+        <p class="price">₹10 per</p>
+         <button onclick="addToCart(this)">Buy Now</button>
+
+
+    </div>
+
+    <div class="item">
+        <div class="emoji">
+            <img src="brush.jfif" alt="Brush Pens">
+        </div>
+        <h3>Brush Pen set</h3>
+        <p class="price">₹60</p>
+       <button onclick="addToCart(this)">Buy Now</button>
+
+
+    </div>
+
+    <div class="item">
+        <div class="emoji">
+            <img src="drw.jfif" alt="Drawing Book">
+        </div>
+        <h3>Drawing Book</h3>
+        <p class="price">₹50</p>
+          <button onclick="addToCart(this)">Buy Now</button>
+
+
+    </div>
+
+    <div class="item">
+        <div class="emoji">
+            <img src="color.jfif" alt="Colouring Book">
+        </div>
+        <h3>Colouring Book</h3>
+        <p class="price">₹60</p>
+         <button onclick="addToCart(this)">Buy Now</button>
+
+
+    </div>
+
+    <div class="item">
+        <div class="emoji">
+            <img src="acti.jfif" alt="Activity Book">
+        </div>
+        <h3>Activity Book</h3>
+        <p class="price">₹70</p>
+         <button onclick="addToCart(this)">Buy Now</button>
+
+
+    </div>
+
+    <div class="item">
+        <div class="emoji">
+            <img src="story.jfif" alt="Kids Story Book">
+        </div>
+        <h3>Kids Story Book</h3>
+        <p class="price">₹70</p>
+         <button onclick="addToCart(this)">Buy Now</button>
+
+
+    </div>
+
+    <div class="item">
+        <div class="emoji">
+            <img src="n.jfif" alt="Cartoon Notebook">
+        </div>
+        <h3>Notebook</h3>
+        <p class="price">₹50</p>
+         <button onclick="addToCart(this)">Buy Now</button>
+
+
+    </div>
+
+    <div class="item">
+        <div class="emoji">
+            <img src="dia.jfif" alt="Cute Diary">
+        </div>
+        <h3>Cute Diary</h3>
+        <p class="price">₹80</p>
+         <button onclick="addToCart(this)">Buy Now</button>
+
+
+    </div>
+
+    <div class="item">
+        <div class="emoji">
+            <img src="multi.jfif" alt="Watercolour Set">
+        </div>
+        <h3>Watercolour Set</h3>
+        <p class="price">₹80</p>
+        <button onclick="addToCart(this)">Buy Now</button>
+
+
+    </div>
+
+    <div class="item">
+        <div class="emoji">
+            <img src="paint.jfif" alt="Paint Brush Set">
+        </div>
+        <h3>Paint Brush Set</h3>
+        <p class="price">₹50</p>
+         <button onclick="addToCart(this)">Buy Now</button>
+
+
+    </div>
+
+    <div class="item">
+        <div class="emoji">
+            <img src="oil.jfif" alt="Oil Pastels">
+        </div>
+        <h3>Oil Pastels</h3>
+        <p class="price">₹70</p>
+          <button onclick="addToCart(this)">Buy Now</button>
+
+
+    </div>
+
+    <div class="item">
+        <div class="emoji">
+            <img src="cra.jfif" alt="Craft Paper">
+        </div>
+        <h3>Craft Paper</h3>
+        <p class="price">₹30</p>
+          <button onclick="addToCart(this)">Buy Now</button>
+
+
+    </div>
+
+    <div class="item">
+        <div class="emoji">
+            <img src="orig.jfif" alt="Origami Paper">
+        </div>
+        <h3>Origami Craft</h3>
+        <p class="price">₹40</p>
+         <button onclick="addToCart(this)">Buy Now</button>
+
+
+    </div>
+
+    <div class="item">
+        <div class="emoji">
+            <img src="gli.jfif" alt="Glitter Paper">
+        </div>
+        <h3>Glitter Paper</h3>
+        <p class="price">₹50</p>
+     <button onclick="addToCart(this)">Buy Now</button>
+
+
+    </div>
+
+    <div class="item">
+        <div class="emoji">
+            <img src="sti.jfif" alt="Sticker Sheets">
+        </div>
+        <h3>Sticker Sheets</h3>
+        <p class="price">₹20</p>
+        <button onclick="addToCart(this)">Buy Now</button>
+
+
+    </div>
+
+    <div class="item">
+        <div class="emoji">
+            <img src="glue.jfif" alt="Glue Stick">
+        </div>
+        <h3>Glue Stick</h3>
+        <p class="price">₹25</p>
+         <button onclick="addToCart(this)">Buy Now</button>
+
+
+    </div>
+
+    <div class="item">
+        <div class="emoji">
+            <img src="si.jfif" alt="Kids Scissors">
+        </div>
+        <h3>Kids Scissors</h3>
+        <p class="price">₹30</p>
+         <button onclick="addToCart(this)">Buy Now</button>
+
+
+    </div>
+
+    <div class="item">
+        <div class="emoji">
+            <img src="rol.jfif" alt="Cartoon Ruler">
+        </div>
+        <h3>Cartoon Ruler</h3>
+        <p class="price">₹20</p>
+         <button onclick="addToCart(this)">Buy Now</button>
+
+
+    </div>
+
+   
+
+    <div class="item">
+        <div class="emoji">
+            <img src="st.jfif"alt="Cute Sticky Notes">
+        </div>
+        <h3>Cute Sticky Notes</h3>
+        <p class="price">₹30</p>
+        <button onclick="addToCart(this)">Buy Now</button>
+
+
+    </div>
+
+    <div class="item">
+        <div class="emoji">
+            <img src="kbottle.jfif" alt="Kids Stamp Set">
+        </div>
+        <h3>Kids Waterbottle</h3>
+        <p class="price">₹80</p>
+         <button onclick="addToCart(this)">Buy Now</button>
+
+
+    </div>
+
+    <div class="item">
+        <div class="emoji">
+            <img src="lunch.jfif" alt="Reward Stickers">
+        </div>
+        <h3>Kids LunchBox</h3>
+        <p class="price">₹100</p>
+        <button onclick="addToCart(this)">Buy Now</button>
+
+
+    </div>
+
+</div>
+
+<footer>
+    <p>© 2026 PaperNest Stationery</p>
+</footer>
+<script src="wishlist.js"></script>
+<script src="cart2.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>School Bags - Pen & Paper</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f8f6ef;
+            color: #102b5c;
+        }
+
+        /* HEADER */
+
+        .header {
+            height: 100px;
+            background: #fffdf7;
+            display: flex;
+            align-items: center;
+            padding: 10px 25px;
+            gap: 25px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .logo {
+            width: 330px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-icon {
+            font-size: 50px;
+        }
+
+        .logo h1 {
+            font-size: 32px;
+            color: #12356f;
+        }
+
+        .logo p {
+            font-size: 13px;
+        }
+
+        .search {
+            flex: 1;
+            max-width: 520px;
+            height: 50px;
+            border: 1px solid #aaa;
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            background: white;
+        }
+
+        .search input {
+            width: 100%;
+            border: none;
+            outline: none;
+            font-size: 15px;
+        }
+
+        .search span {
+            font-size: 25px;
+        }
+
+        .top-links {
+            display: flex;
+            align-items: center;
+            gap: 22px;
+        }
+
+        .top-links a {
+            text-decoration: none;
+            color: #102b5c;
+        }
+
+        .cart {
+            position: relative;
+            font-size: 25px;
+        }
+
+        .count {
+            position: absolute;
+            top: -8px;
+            right: -10px;
+            background: #e63950;
+            color: white;
+            border-radius: 50%;
+            font-size: 11px;
+            padding: 3px 6px;
+        }
+
+        /* MAIN */
+
+        .main {
+            display: flex;
+        }
+
+        /* SIDEBAR */
+
+        .sidebar {
+            width: 290px;
+            min-height: calc(100vh - 100px);
+            background: #102f61;
+            color: white;
+        }
+
+        .category-title {
+            padding: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            border-bottom: 1px solid #41618b;
+        }
+
+        .menu a {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: white;
+            text-decoration: none;
+            padding: 14px 17px;
+            font-size: 15px;
+        }
+
+        .menu a:hover {
+            background: #2878d6;
+        }
+
+        .menu-icon {
+            width: 30px;
+            text-align: center;
+            font-size: 21px;
+        }
+
+        .arrow {
+            margin-left: auto;
+        }
+
+        .line {
+            border-top: 1px solid #526c92;
+            margin: 7px 15px;
+        }
+
+        /* CONTENT */
+
+        .content {
+            flex: 1;
+            padding: 18px;
+        }
+
+        .page-title {
+            background: linear-gradient(120deg, #fff0b5, #dff4ff);
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+
+        .page-title h2 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .page-title p {
+            font-size: 17px;
+        }
+
+        /* PRODUCTS */
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+        }
+
+        .product {
+            background: white;
+            border-radius: 12px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 3px 10px #ddd;
+            min-height: 300px;
+        }
+
+        /* PRODUCT IMAGE */
+
+        .product img {
+            width: 100%;
+            height: 170px;
+            object-fit: cover;
+            border-radius: 10px;
+            display: block;
+            margin-bottom: 12px;
+        }
+
+        .product h3 {
+            font-size: 18px;
+            margin: 8px;
+        }
+
+        .price {
+            color: #e63950;
+            font-weight: bold;
+            font-size: 17px;
+            margin: 10px;
+        }
+
+        .buy {
+            display: inline-block;
+            background: #174f91;
+            color: white;
+            padding: 9px 20px;
+            border-radius: 22px;
+            text-decoration: none;
+        }
+
+        .buy:hover {
+            background: #2878d6;
+        }
+
+        /* FOOTER */
+
+        .footer {
+            margin-top: 25px;
+            background: #102f61;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* RESPONSIVE */
+
+        @media(max-width:1000px) {
+
+            .sidebar {
+                width: 220px;
+            }
+
+            .products {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .top-links {
+                display: none;
+            }
+        }
+
+        @media(max-width:700px) {
+
+            .sidebar {
+                display: none;
+            }
+
+            .products {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .header {
+                flex-wrap: wrap;
+                height: auto;
+            }
+
+            .search {
+                order: 3;
+                width: 100%;
+            }
+        }
+
+        @media(max-width:500px) {
+
+            .products {
+                grid-template-columns: 1fr;
+            }
+
+            .logo {
+                width: 100%;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header class="header">
+
+    <div class="logo">
+
+        <div class="logo-icon">🖍️</div>
+
+        <div>
+            <h1>Pen & Paper</h1>
+            <p>Stationery for a Brighter Tomorrow</p>
+        </div>
+
+    </div>
+
+    <div class="search">
+
+        <input type="text" placeholder="Search for products...">
+
+        <span>⌕</span>
+
+    </div>
+
+    <div class="top-links">
+
+        <a href="index.html">🏠 Home</a>
+
+        <a href="about.html">About</a>
+
+        <a href="contact.html">Contact</a>
+
+        <span>♙</span>
+
+        <span class="cart">
+            🛒
+            <span class="count">0</span>
+        </span>
+
+    </div>
+
+</header>
+
+
+<div class="main">
+
+<!-- SIDEBAR -->
+
+<aside class="sidebar">
+
+    <div class="category-title">
+        ☰ &nbsp; All Categories
+    </div>
+
+    <div class="menu">
+
+        <a href="index.html">
+            🏠 Home
+        </a>
+
+        <a href="kids.html">
+            🧒 Kids Section
+            <span class="arrow">›</span>
+        </a>
+
+        <a href="office.html">
+            💼 Office Use
+            <span class="arrow">›</span>
+        </a>
+
+        <a href="students.html">
+            🎓 Students
+            <span class="arrow">›</span>
+        </a>
+
+        <div class="line"></div>
+
+        <a href="school-bags.html">
+            🎒 School Bags
+        </a>
+
+        <a href="notebooks.html">
+            📚 Notebooks & Books
+        </a>
+
+        <a href="writing.html">
+            🖊️ Writing Instruments
+        </a>
+
+        <a href="art.html">
+            🎨 Art & Drawing
+        </a>
+
+        <a href="geometry.html">
+            📐 Geometry & Maths
+        </a>
+
+      <a href="cart2.html">
+    🛒 Cart (<span class="cart-count">0</span>)
+</a>
+
+
+        <a href="gifts.html">
+            🎁 Gifts & Others
+        </a>
+
+    </div>
+
+</aside>
+
+
+<!-- CONTENT -->
+
+<main class="content">
+
+    <div class="page-title">
+
+        <h2>🎒 School Bags</h2>
+
+        <p>
+            Stylish, comfortable and useful bags for
+            school students and kids.
+        </p>
+
+    </div>
+
+
+    <div class="products">
+
+        <!-- 1 -->
+
+        <div class="product">
+
+            <img src="classic.jfif"
+
+                 alt="Classic School Bag">
+
+            <h3>Classic School Bag</h3>
+
+            <p class="price">₹650</p>
+
+           <button onclick="addToCart(this)">Buy Now</button>
+
+
+
+        </div>
+
+
+        <!-- 2 -->
+
+        <div class="product">
+
+            <img src="com.jfif"
+
+                 alt="3 Compartment Bag">
+
+            <h3>3-Compartment Bag</h3>
+
+            <p class="price">₹850</p>
+
+              <button onclick="addToCart(this)">Buy Now</button>
+
+
+
+
+        </div>
+
+
+        <!-- 3 -->
+
+        <div class="product">
+
+            <img src="kbag.jfif"
+
+                 alt="Kids Cartoon Bag">
+
+            <h3>Kids Cartoon Bag</h3>
+
+            <p class="price">₹550</p>
+
+          <button onclick="addToCart(this)">Buy Now</button>
+
+
+
+
+        </div>
+
+
+        <!-- 4 -->
+
+        <div class="product">
+
+            <img src="coll.jfif"
+
+                 alt="College Backpack">
+
+            <h3>College Backpack</h3>
+
+            <p class="price">₹750</p>
+
+          <button onclick="addToCart(this)">Buy Now</button>
+
+
+
+
+        </div>
+
+
+        <!-- 5 -->
+
+        <div class="product">
+
+            <img src="lap.jfif"
+
+                 alt="Laptop Backpack">
+
+            <h3>Laptop Backpack</h3>
+
+            <p class="price">₹1200</p>
+
+          <button onclick="addToCart(this)">Buy Now</button>
+
+
+
+
+        </div>
+
+
+        <!-- 6 -->
+
+        <div class="product">
+
+            <img src="mini.jfif"
+
+                 alt="Mini School Bag">
+
+            <h3>Mini School Bag</h3>
+
+            <p class="price">₹450</p>
+
+          <button onclick="addToCart(this)">Buy Now</button>
+
+
+
+        </div>
+
+
+        <!-- 7 -->
+
+        <div class="product">
+
+            <img src="trav.jfif"
+                 alt="Travel Backpack">
+
+            <h3>Travel Backpack</h3>
+
+            <p class="price">₹950</p>
+
+             <button onclick="addToCart(this)">Buy Now</button>
+
+
+
+
+        </div>
+
+
+
+        <!-- 9 -->
+
+        <div class="product">
+
+            <img src="pbag.jfif"
+
+                 alt="Pencil Pouch Bag">
+
+            <h3>Pencil Pouch Bag</h3>
+
+            <p class="price">₹150</p>
+
+              <button onclick="addToCart(this)">Buy Now</button>
+
+
+
+
+        </div>
+
+
+        <!-- 10 -->
+
+        <div class="product">
+
+            <img src="spo.jfif"
+
+                 alt="Sports Bag">
+
+            <h3>Sports Bag</h3>
+
+            <p class="price">₹700</p>
+
+             <button onclick="addToCart(this)">Buy Now</button>
+
+
+
+        </div>
+
+
+        <!-- 11 -->
+
+        <div class="product">
+
+            <img src="sh.jfif"
+
+                 alt="Shoulder Bag">
+
+            <h3>Shoulder Bag</h3>
+
+            <p class="price">₹500</p>
+
+             <button onclick="addToCart(this)">Buy Now</button>
+
+
+
+
+        </div>
+</div>
+
+        
+    <footer class="footer">
+
+        © 2026 Pen & Paper |
+        Stationery for a Brighter Tomorrow
+
+    </footer>
+
+</main>
+
+</div>
+<script src="wishlist.js"></script>
+<script src="cart2.js"></script>
+
+</body>
+</html>
