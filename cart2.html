@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Shopping Cart</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            margin: 0;
+            background: #fff8e7;
+            color: #333;
+        }
+
+        header {
+            background: #d95d6a;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        nav {
+            background: #2d3436;
+            text-align: center;
+            padding: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 10px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #c44555;
+            margin-top: 30px;
+        }
+
+        #cart-items {
+            max-width: 850px;
+            margin: 25px auto;
+            padding: 15px;
+        }
+
+        .cart-item {
+            background: white;
+            padding: 18px;
+            margin-bottom: 15px;
+            border-radius: 12px;
+            box-shadow: 0 3px 8px #00000015;
+        }
+
+        .cart-item h3 {
+            color: #c44555;
+        }
+
+        button {
+            background: #d95d6a;
+            color: white;
+            border: none;
+            padding: 9px 14px;
+            margin: 5px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #b83f50;
+        }
+
+        .summary {
+            max-width: 850px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        #cart-total {
+            font-size: 24px;
+            font-weight: bold;
+            color: #c44555;
+        }
+
+        @media (max-width: 600px) {
+            #cart-items, .summary {
+                margin: 15px;
+            }
+
+            nav a {
+                display: inline-block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>🛒 My Shopping Cart</h1>
+        <p>Pen & Paper Stationery</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="writing.html">Writing</a>
+        <a href="kids.html">Kids</a>
+        <a href="students.html">Students</a>
+        <a href="office.html">Office</a>
+        <a href="cart.html">Cart (<span class="cart-count">0</span>)</a>
+    </nav>
+
+    <h2>🛍️ Your Cart Items</h2>
+
+    <div id="cart-items"></div>
+
+    <div class="summary">
+        <h2>Total Amount</h2>
+        <p id="cart-total">₹0</p>
+
+        <button onclick="clearCart()">Clear Cart</button>
+        <button onclick="window.location.href='index.html'">
+            Continue Shopping
+        </button>
+    </div>
+
+    <script src="cart2.js"></script>
+</body>
+</html>

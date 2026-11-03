@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Notebooks & Books - Pen & Paper</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7ff;
+    color: #222;
+}
+
+/* HEADER */
+
+header {
+    background: #182848;
+    color: white;
+    padding: 18px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.search {
+    width: 35%;
+    padding: 10px 15px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+/* MAIN LAYOUT */
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* SIDEBAR */
+
+.sidebar {
+    width: 250px;
+    background: #172554;
+    color: white;
+    padding: 25px 15px;
+}
+
+.sidebar h3 {
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.sidebar a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 14px;
+    margin: 5px 0;
+    border-radius: 8px;
+}
+
+.sidebar a:hover {
+    background: #2563eb;
+}
+
+.sidebar .active {
+    background: #2563eb;
+}
+
+/* CONTENT */
+
+.content {
+    flex: 1;
+    padding: 35px;
+}
+
+.page-title {
+    margin-bottom: 30px;
+}
+
+.page-title h1 {
+    font-size: 32px;
+    color: #172554;
+}
+
+.page-title p {
+    margin-top: 8px;
+    color: #666;
+}
+
+/* CATEGORY */
+
+.category {
+    margin-bottom: 45px;
+}
+
+.category h2 {
+    color: #172554;
+    margin-bottom: 7px;
+    font-size: 25px;
+}
+
+.category-description {
+    color: #666;
+    margin-bottom:20px;
+}
+
+/* PRODUCTS */
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.product {
+    background: white;
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.10);
+    transition: 0.3s;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+}
+
+/* PRODUCT IMAGE */
+
+.product img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+    background: #eeeeee;
+}
+
+.product h3 {
+    margin: 10px 0 7px;
+    font-size: 18px;
+}
+
+.price {
+    color: #e11d48;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.buy {
+    display: inline-block;
+    background: #e11d48;
+    color: white;
+    text-decoration: none;
+    padding: 9px 18px;
+    border-radius: 20px;
+}
+
+/* MOBILE */
+
+@media(max-width: 900px) {
+
+    .products {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media(max-width: 600px) {
+
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    .products {
+        grid-template-columns: 1fr;
+    }
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .search {
+        width: 90%;
+}
+}    
+
+.buy,
+.item button {
+    display: inline-block;
+    background-color: #d95d7a;
+    color: white;
+    text-decoration: none;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.buy:hover,
+.item button:hover {
+    background-color: #c44563;
+    transform: scale(1.05);
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+    <div class="logo">
+        ✏️ Pen & Paper
+    </div>
+
+    <input class="search"
+           type="text"
+           placeholder="Search notebooks and books...">
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+<a href="cart2.html">
+    🛒 Cart (<span class="cart-count">0</span>)
+</a>
+
+    </nav>
+
+</header>
+
+
+<div class="container">
+
+<!-- SIDEBAR -->
+
+<aside class="sidebar">
+
+    <h3>☰ All Categories</h3>
+
+    <a href="index.html">🏠 Home</a>
+
+    <a href="kids.html">👦 Kids Section</a>
+
+    <a href="office.html">💼 Office Use</a>
+
+    <a href="students.html">🎓 Students</a>
+
+    <a href="school-bags.html">🎒 School Bags</a>
+
+    <a href="notebooks.html" class="active">
+        📖 Notebooks & Books
+    </a>
+
+    <a href="writing.html">🖊️ Writing Instruments</a>
+
+    <a href="art.html">🎨 Art & Drawing</a>
+
+    <a href="geometry.html">📐 Geometry & Maths</a>
+
+ 
+
+    <a href="gifts.html">🎁 Gifts & Others</a>
+
+</aside>
+
+
+<!-- CONTENT -->
+
+<main class="content">
+
+<div class="page-title">
+
+    <h1>📖 Notebooks & Books</h1>
+
+    <p>
+        Quality notebooks and useful books for students,
+        children and everyday learning.
+    </p>
+
+</div>
+
+
+<!-- 1. EVERYDAY NOTEBOOKS -->
+
+<section class="category">
+
+<h2>📒 Everyday Notebooks</h2>
+
+<p class="category-description">
+Simple and useful notebooks for everyday writing, notes and school work.
+</p>
+
+<div class="products">
+
+<div class="product">
+<img src="single.jfif">
+
+<h3>Single Line Notebook</h3>
+<p class="price">₹30</p>
+   <button onclick="addToCart(this)">Buy Now</button>
+</div>
+
+<div class="product">
+<img src="two.jfif"
+ alt="Two Line Notebook">
+<h3>Two Line Notebook</h3>
+<p class="price">₹30</p>
+   <button onclick="addToCart(this)">Buy Now</button>
+
+</div>
+
+<div class="product">
+<img src="four.jfif"
+ alt="Four Line Notebook">
+<h3>Four Line Notebook</h3>
+<p class="price">₹30</p>
+   <button onclick="addToCart(this)">Buy Now</button>
+</div>
+
+<div class="product">
+<img src="square.jfif"
+ alt="Square Line Notebook">
+<h3>Square Line Notebook</h3>
+<p class="price">₹25</p>
+   <button onclick="addToCart(this)">Buy Now</button>
+</div>
+
+
+<div class="product">
+<img src="plain.jfif"
+ alt="Plain Notebook">
+<h3>Plain Notebook</h3>
+<p class="price">₹45</p>
+   <button onclick="addToCart(this)">Buy Now</button>
+</div>
+
+</div>
+</section>
+
+
+<!-- 2. ACADEMIC & PRACTICAL -->
+
+<section class="category">
+
+<h2>📚 Academic & Practical Notebooks</h2>
+
+<p class="category-description">
+Designed for school subjects, mathematics practice and practical records.
+</p>
+
+<div class="products">
+
+<div class="product">
+<img src="mprac.jfif" alt="maths">
+
+<h3>Mathematics Practice Book</h3>
+<p class="price">₹75</p>
+   <button onclick="addToCart(this)">Buy Now</button>
+</div>
+
+<div class="product">
+<img src="drwbook.jfif"
+ alt="Drawing Book">
+<h3>Drawing Book</h3>
+<p class="price">₹55</p>
+   <button onclick="addToCart(this)">Buy Now</button>
+</div>
+
+<div class="product">
+<img src="sprac.jfif"
+alt="Science Practice Notebook">
+<h3>Science Practice Notebook</h3>
+<p class="price">₹65</p>
+   <button onclick="addToCart(this)">Buy Now</button>
+</div>
+
+<div class="product">
+<img src="lab.jfif"
+ alt="Lab Record Book">
+<h3>Lab Record Book</h3>
+<p class="price">₹100</p>
+   <button onclick="addToCart(this)">Buy Now</button>
+</div>
+
+<div class="product">
+<img src="clnote.jfif"
+ alt="Class Notebook">
+<h3>Class Notebook</h3>
+<p class="price">₹45</p>
+   <button onclick="addToCart(this)">Buy Now</button>
+</div>
+
+<div class="product">
+<img src="rough.jfif"
+ alt="Rough Practice Book">
+<h3>Rough Practice Book</h3>
+<p class="price">₹25</p>
+   <button onclick="addToCart(this)">Buy Now</button>
+</div>
+
+</div>
+</section>
+
+
+<!-- 3. EDUCATIONAL & REFERENCE -->
+
+<section class="category">
+
+<h2>📘 Educational & Reference Books</h2>
+
+<p class="category-description">
+Helpful books for improving knowledge, language skills and learning.
+</p>
+
+<div class="products">
+
+<div class="product">
+<img src="general.jfif"
+ alt="General Knowledge Book">
+<h3>General Knowledge Book</h3>
+<p class="price">₹150</p>
+   <button onclick="addToCart(this)">Buy Now</button>
+</div>
+
+<div class="product">
+<img src="gramm.jfif"
+ alt="English Grammar Book">
+<h3>English Grammar Book</h3>
+<p class="price">₹180</p>
+   <button onclick="addToCart(this)">Buy Now</button>
+</div>
+
+<div class="product">
+<img src="voca.jfif"
+alt="Vocabulary Book">
+<h3>Vocabulary Book</h3>
+<p class="price">₹140</p>
+   <button onclick="addToCart(this)">Buy Now</button>
+</div>
+
+<div class="product">
+<img src="dic.jfif"
+ alt="Dictionary">
+<h3>Dictionary</h3>
+<p class="price">₹250</p>
+   <button onclick="addToCart(this)">Buy Now</button>
+</div>
+
+<div class="product">
+<img src="refe.jfif"
+ alt="Student Reference Book">
+<h3>Student Reference Book</h3>
+<p class="price">₹220</p>
+   <button onclick="addToCart(this)">Buy Now</button>
+</div>
+
+</div>
+</section>
+
+
+<!-- 4. NURSERY & KIDS -->
+
+<section class="category">
+
+<h2>🌈 Nursery Kids Books & Story Books</h2>
+
+<p class="category-description">
+Colorful activity books that make early learning fun and enjoyable.
+</p>
+
+<div class="products">
+
+<div class="product">
+<img src="alph.jfif"
+ alt="Alphabet Learning Book">
+<h3>Alphabet Learning Book</h3>
+<p class="price">₹100</p>
+   <button onclick="addToCart(this)">Buy Now</button>
+</div>
+
+<div class="product">
+<img src="no.jfif"
+ alt="Numbers Practice Book">
+<h3>Numbers Practice Book</h3>
+<p class="price">₹100</p>
+   <button onclick="addToCart(this)">Buy Now</button>
+</div>
+
+<div class="product">
+<img src="colbook.jfif"
+ alt="Colouring Activity Book">
+<h3>Colouring Activity Book</h3>
+<p class="price">₹90</p>
+   <button onclick="addToCart(this)">Buy Now</button>
+</div>
+
+<div class="product">
+<img src="activity.jfif"
+alt="Kids Activity Book">
+<h3>Kids Activity Book</h3>
+<p class="price">₹120</p>
+   <button onclick="addToCart(this)">Buy Now</button>
+</div>
+
+<div class="product">
+<img src="pic.jfif"
+alt="Picture Book">
+<h3>Picture Book</h3>
+<p class="price">₹110</p>
+   <button onclick="addToCart(this)">Buy Now</button>
+</div>
+
+<div class="product">
+<img src="stotyc.jfif"
+ alt="Children's Story Book">
+<h3>Children's Story Book</h3>
+<p class="price">₹150</p>
+   <button onclick="addToCart(this)">Buy Now</button>
+</div>
+
+<div class="product">
+<img src="moral.jfif" height="600" weidth="800"
+ alt="Moral Stories">
+<h3>Moral Stories</h3>
+<p class="price">₹140</p>
+   <button onclick="addToCart(this)">Buy Now</button>
+</div>
+
+<div class="product">
+<img src="adven.jfif"
+alt="Adventure Stories">
+<h3>Adventure Stories</h3>
+<p class="price">₹180</p>
+   <button onclick="addToCart(this)">Buy Now</button>
+</div>
+
+<div class="product">
+<img src="clasic.jfif"
+alt="Classic Stories">
+<h3>Classic Stories</h3>
+<p class="price">₹200</p>
+   <button onclick="addToCart(this)">Buy Now</button>
+</div>
+
+
+</div>
+</section>
+
+
+</main>
+
+</div>
+<script src="wishlist.js"></script>
+<script src="cart2.js"></script>
+
+</body>
+</html>

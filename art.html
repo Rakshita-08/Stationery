@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Art & Drawing - Pen & Paper</title>
+
+<style>
+
+/* BASIC */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7ff;
+    color: #222;
+}
+
+/* HEADER */
+
+header {
+    background: linear-gradient(90deg, #172554, #2563eb);
+    color: white;
+    padding: 18px 35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #ffd43b;
+}
+
+.search {
+    width: 350px;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 25px;
+    outline: none;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 18px;
+    font-weight: bold;
+}
+
+.nav a:hover {
+    color: #ffd43b;
+}
+
+/* MAIN */
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* SIDEBAR */
+
+.sidebar {
+    width: 250px;
+    background: #101a3a;
+    padding: 25px 15px;
+    color: white;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 21px;
+}
+
+.sidebar a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 15px 12px;
+    margin-bottom: 5px;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+.sidebar a:hover {
+    background: #2563eb;
+}
+
+.sidebar a.active {
+    background: #e83e8c;
+    font-weight: bold;
+}
+
+/* CONTENT */
+
+.content {
+    flex: 1;
+    padding: 30px;
+}
+
+.page-title {
+    text-align: center;
+    margin-bottom: 12px;
+    font-size: 36px;
+    color: #172554;
+}
+
+.page-title span {
+    color: #e83e8c;
+}
+
+.intro {
+    text-align: center;
+    color: #555;
+    margin-bottom: 30px;
+    font-size: 17px;
+}
+
+/* BANNER */
+
+.art-banner {
+    background: linear-gradient(135deg, #ffe4f1, #fff4b8, #dbeafe);
+    border-radius: 20px;
+    padding: 25px;
+    margin-bottom: 35px;
+    text-align: center;
+    border: 3px dashed #e83e8c;
+}
+
+.art-banner h2 {
+    color: #c02670;
+    margin-bottom: 10px;
+}
+
+.art-banner p {
+    color: #444;
+}
+
+/* CATEGORY */
+
+.category {
+    margin-bottom: 40px;
+}
+
+.category-title {
+    padding: 14px 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: white;
+}
+
+.drawing-title {
+    background: linear-gradient(90deg, #6366f1, #8b5cf6);
+}
+
+.colour-title {
+    background: linear-gradient(90deg, #ec4899, #f43f5e);
+}
+
+.painting-title {
+    background: linear-gradient(90deg, #f97316, #eab308);
+}
+
+.creative-title {
+    background: linear-gradient(90deg, #10b981, #06b6d4);
+}
+
+/* PRODUCTS */
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+/* PRODUCT CARD */
+
+.product {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    transition: 0.3s;
+    border: 2px solid transparent;
+}
+
+.product:hover {
+    transform: translateY(-7px);
+    border-color: #e83e8c;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.18);
+}
+
+/* IMAGE */
+
+.product img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    display: block;
+}
+
+/* PRODUCT INFO */
+
+.product-info {
+    padding: 15px;
+}
+
+.product h3 {
+    color: #172554;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.product p {
+    font-size: 13px;
+    color: #666;
+    min-height: 35px;
+    margin-bottom: 10px;
+}
+
+.price {
+    color: #e83e8c;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* BUTTON */
+
+.buy-btn {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    background: #2563eb;
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.buy-btn:hover {
+    background: #e83e8c;
+}
+
+/* FOOTER */
+
+footer {
+    background: #101a3a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1100px) {
+
+    .products {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+@media(max-width:800px) {
+
+    .sidebar {
+        width: 200px;
+    }
+
+    .products {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .search {
+        width: 250px;
+    }
+
+}
+
+@media(max-width:600px) {
+
+    header {
+        gap: 15px;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    .products {
+        grid-template-columns: 1fr;
+    }
+
+    .content {
+        padding: 15px;
+    }
+
+    .search {
+        width: 100%;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<!-- HEADER -->
+
+<header>
+
+    <div class="logo">
+        ✏️ Pen <span>&</span> Paper
+    </div>
+
+    <input
+        type="text"
+        class="search"
+        placeholder="Search art & drawing items..."
+    >
+
+    <div class="nav">
+
+        <a href="index.html">Home</a>
+
+        <a href="about.html">About</a>
+
+        <a href="contact.html">Contact</a>
+
+        🛒
+
+    </div>
+
+</header>
+
+
+<!-- MAIN CONTAINER -->
+
+<div class="container">
+
+
+<!-- SIDEBAR -->
+
+<aside class="sidebar">
+
+    <h2>☰ All Categories</h2>
+
+    <a href="index.html">🏠 Home</a>
+
+    <a href="kids.html">👶 Kids Section</a>
+
+    <a href="office.html">💼 Office Use</a>
+
+    <a href="students.html">🎓 Students</a>
+
+    <a href="school-bags.html">🎒 School Bags</a>
+
+    <a href="notebooks.html">📖 Notebooks & Books</a>
+
+    <a href="writing.html">🖊️ Writing Instruments</a>
+
+    <a href="art.html" class="active">
+        🎨 Art & Drawing
+    </a>
+
+    <a href="geometry.html">📐 Geometry & Maths</a>
+    <a href="gifts.html">🎁 Gifts</a>
+<a href="cart2.html">
+    🛒 Cart (<span class="cart-count">0</span>)
+</a>
+
+</aside>
+
+
+<!-- CONTENT -->
+
+<main class="content">
+
+
+<h1 class="page-title">
+    🎨 <span>Art & Drawing</span>
+</h1>
+
+<p class="intro">
+    Draw • Colour • Paint • Create • Imagine
+</p>
+
+
+<!-- BANNER -->
+
+<div class="art-banner">
+
+    <h2>🌈 Create Your Own Masterpiece!</h2>
+
+    <p>
+        Discover colourful drawing, painting, colouring
+        and creative art supplies for students and kids.
+    </p>
+
+</div>
+
+
+<!-- ========================================== -->
+<!-- DRAWING & SKETCHING - 10 ITEMS -->
+<!-- ========================================== -->
+
+<section class="category">
+
+<h2 class="category-title drawing-title">
+    ✏️ Drawing & Sketching
+</h2>
+
+<div class="products">
+
+
+<!-- 1 -->
+
+<div class="product">
+
+    <img src="drw.jfif"
+         alt="Drawing Book">
+
+    <div class="product-info">
+
+        <h3>Drawing Book</h3>
+
+        <p>
+            Perfect book for everyday drawing and sketching.
+        </p>
+
+        <div class="price">₹60</div>
+
+        <button onclick="addToCart(this)">Buy Now</button>
+
+
+    </div>
+
+</div>
+
+
+<!-- 2 -->
+
+<div class="product">
+
+    <img src="sketchb.jfif"
+         alt="Sketch Book">
+
+    <div class="product-info">
+
+        <h3>Sketch Book</h3>
+
+        <p>
+            Good quality pages for pencil sketches.
+        </p>
+
+        <div class="price">₹90</div>
+
+          <button onclick="addToCart(this)">Buy Now</button>
+
+
+    </div>
+
+</div>
+
+
+<!-- 3 -->
+
+<div class="product">
+
+    <img src="sheet.jfif"
+         alt="Drawing Sheets">
+
+    <div class="product-info">
+
+        <h3>Drawing Sheets</h3>
+
+        <p>
+            Clean sheets for drawing and colouring.
+        </p>
+
+        <div class="price">₹40</div>
+
+          <button onclick="addToCart(this)">Buy Now</button>
+
+
+    </div>
+
+</div>
+
+
+
+
+<!-- 6 -->
+
+<div class="product">
+
+    <img src="grap.jfif"
+
+         alt="Graphite Drawing Pencils">
+
+    <div class="product-info">
+
+        <h3>Graphite Drawing Pencils</h3>
+
+        <p>
+            Different shades for detailed pencil drawing.
+        </p>
+
+        <div class="price">₹80</div>
+
+          <button onclick="addToCart(this)">Buy Now</button>
+
+
+
+    </div>
+
+</div>
+
+
+<!-- 7 -->
+
+<div class="product">
+
+    <img src="char.jfif"
+         alt="Charcoal Pencils">
+
+    <div class="product-info">
+
+        <h3>Charcoal Pencils</h3>
+
+        <p>
+            Useful for dark shades and artistic sketches.
+        </p>
+
+        <div class="price">₹100</div>
+
+     <button onclick="addToCart(this)">Buy Now</button>
+
+
+
+    </div>
+
+</div>
+
+
+<!-- 8 -->
+
+<div class="product">
+
+    <img src="spenc.jfif"
+
+         alt="Sketching Pencil Set">
+
+    <div class="product-info">
+
+        <h3>Sketching Pencil Set</h3>
+
+        <p>
+            Complete pencil set for drawing lovers.
+        </p>
+
+        <div class="price">₹150</div>
+
+        <button onclick="addToCart(this)">Buy Now</button>
+
+
+
+    </div>
+
+</div>
+
+
+<!-- 9 -->
+
+<div class="product">
+
+    <img src="dpencbox.jfif"
+
+         alt="Drawing Pencil Box">
+
+    <div class="product-info">
+
+        <h3>Drawing Pencil Box</h3>
+
+        <p>
+            Organized box containing drawing pencils.
+        </p>
+
+        <div class="price">₹180</div>
+
+         <button onclick="addToCart(this)">Buy Now</button>
+
+
+
+    </div>
+
+</div>
+
+
+<!-- 10 -->
+
+<div class="product">
+
+    <img src="blending.jfif"
+
+         alt="Blending Stump">
+
+    <div class="product-info">
+
+        <h3>Blending Stump</h3>
+
+        <p>
+            Helps create smooth pencil shading.
+        </p>
+
+        <div class="price">₹50</div>
+
+           <button onclick="addToCart(this)">Buy Now</button>
+
+
+
+    </div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ========================================== -->
+<!-- COLOURING - 8 ITEMS -->
+<!-- ========================================== -->
+
+<section class="category">
+
+<h2 class="category-title colour-title">
+    🖍️ Colouring Supplies
+</h2>
+
+<div class="products">
+
+
+<!-- 11 -->
+
+<div class="product">
+
+    <img src="c.jfif"
+
+         alt="Crayon Set">
+
+    <div class="product-info">
+
+        <h3>Crayon Set</h3>
+
+        <p>
+            Bright colours for kids and school projects.
+        </p>
+
+        <div class="price">₹50</div>
+
+          <button onclick="addToCart(this)">Buy Now</button>
+
+
+
+
+    </div>
+
+</div>
+
+
+<!-- 12 -->
+
+<div class="product">
+
+    <img src="wax.jfif"
+
+         alt="Wax Crayons">
+
+    <div class="product-info">
+
+        <h3>Wax Crayons</h3>
+
+        <p>
+            Easy-to-use colourful wax crayons.
+        </p>
+
+        <div class="price">₹45</div>
+
+        <button onclick="addToCart(this)">Buy Now</button>
+
+
+
+
+    </div>
+
+</div>
+
+
+<!-- 13 -->
+
+<div class="product">
+
+    <img src="oil.jfif"
+
+         alt="Oil Pastels">
+
+    <div class="product-info">
+
+        <h3>Oil Pastels</h3>
+
+        <p>
+            Soft and bright colours for artwork.
+        </p>
+
+        <div class="price">₹90</div>
+
+          <button onclick="addToCart(this)">Buy Now</button>
+
+
+
+    </div>
+
+</div>
+
+
+<!-- 14 -->
+
+<div class="product">
+
+    <img src="colpenc.jfif"
+
+         alt="Colour Pencil Set">
+
+    <div class="product-info">
+
+        <h3>Colour Pencil Set</h3>
+
+        <p>
+            Colour pencils for neat and detailed colouring.
+        </p>
+
+        <div class="price">₹100</div>
+
+     <button onclick="addToCart(this)">Buy Now</button>
+
+
+
+    </div>
+
+</div>
+
+
+<!-- 15 -->
+
+<div class="product">
+
+    <img src="colpenc.jfif"
+
+         alt="Water Colour Pencils">
+
+    <div class="product-info">
+
+        <h3>Water Colour Pencils</h3>
+
+        <p>
+            Create beautiful water-colour effects.
+        </p>
+
+        <div class="price">₹130</div>
+
+         <button onclick="addToCart(this)">Buy Now</button>
+
+
+
+
+    </div>
+
+</div>
+
+
+<!-- 16 -->
+
+<div class="product">
+
+    <img src="spen.jfif"
+
+         alt="Sketch Pens Set">
+
+    <div class="product-info">
+
+        <h3>Sketch Pens Set</h3>
+
+        <p>
+            Bright sketch pens for creative drawings.
+        </p>
+
+        <div class="price">₹70</div>
+
+           <button onclick="addToCart(this)">Buy Now</button>
+
+
+
+
+    </div>
+
+</div>
+
+
+<!-- 17 -->
+
+<div class="product">
+
+    <img src="glitter.jfif"
+
+         alt="Glitter Colour Pencil">
+
+    <div class="product-info">
+
+        <h3>Glitter Colour Pens</h3>
+
+        <p>
+            Add sparkle to greeting cards and artwork.
+        </p>
+
+        <div class="price">₹80</div>
+     <button onclick="addToCart(this)">Buy Now</button>
+
+
+
+    </div>
+
+</div>
+
+
+<!-- 18 -->
+
+<div class="product">
+
+    <img src="posterc.jfif"
+
+         alt="Poster Colours">
+
+    <div class="product-info">
+
+        <h3>Poster Colours</h3>
+
+        <p>
+            Bright colours for school paintings.
+        </p>
+
+        <div class="price">₹100</div>
+
+            <button onclick="addToCart(this)">Buy Now</button>
+
+
+
+
+    </div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ========================================== -->
+<!-- PAINTING - 7 ITEMS -->
+<!-- ========================================== -->
+
+<section class="category">
+
+<h2 class="category-title painting-title">
+    🎨 Painting Supplies
+</h2>
+
+<div class="products">
+
+
+<!-- 19 -->
+
+<div class="product">
+
+    <img src="waterco.jfif"
+
+         alt="Water Colour Set">
+
+    <div class="product-info">
+
+        <h3>Water Colour Set</h3>
+
+        <p>
+            Beautiful colours for painting and school work.
+        </p>
+
+        <div class="price">₹80</div>
+
+         <button onclick="addToCart(this)">Buy Now</button>
+
+
+
+
+    </div>
+
+</div>
+
+
+<!-- 20 -->
+
+<div class="product">
+
+    <img src="acryp.jfif"
+
+         alt="Acrylic Colour Set">
+
+    <div class="product-info">
+
+        <h3>Acrylic Colour Set</h3>
+
+        <p>
+            Colour set for creative painting projects.
+        </p>
+
+        <div class="price">₹180</div>
+
+     <button onclick="addToCart(this)">Buy Now</button>
+
+
+
+    </div>
+
+</div>
+
+
+<!-- 21 -->
+
+<div class="product">
+
+    <img src="paint.jfif"
+
+         alt="Paint Brush Set">
+
+    <div class="product-info">
+
+        <h3>Paint Brush Set</h3>
+
+        <p>
+            Different brush sizes for painting.
+        </p>
+
+        <div class="price">₹90</div>
+
+        <button onclick="addToCart(this)">Buy Now</button>
+
+
+
+    </div>
+
+</div>
+
+
+<!-- 22 -->
+
+<div class="product">
+
+    <img src="plate.jfif"
+
+         alt="Painting Palette">
+
+    <div class="product-info">
+
+        <h3>Painting Palette</h3>
+
+        <p>
+            Useful palette for mixing colours.
+        </p>
+
+        <div class="price">₹40</div>
+
+            <button onclick="addToCart(this)">Buy Now</button>
+
+
+
+    </div>
+
+</div>
+
+
+<!-- 23 -->
+
+<div class="product">
+
+    <img src="canvas.jfif"
+
+         alt="Canvas Board">
+
+    <div class="product-info">
+
+        <h3>Canvas Board</h3>
+
+        <p>
+            Smooth surface for painting projects.
+        </p>
+
+        <div class="price">₹120</div>
+
+          <button onclick="addToCart(this)">Buy Now</button>
+
+
+
+    </div>
+
+</div>
+
+
+<!-- 24 -->
+
+<div class="product">
+
+    <img src="finger.jfif"
+
+         alt="Finger Paint Set">
+
+    <div class="product-info">
+
+        <h3>Finger Paint Set</h3>
+
+        <p>
+            Fun and colourful painting activity set.
+        </p>
+
+        <div class="price">₹120</div>
+
+            <button onclick="addToCart(this)">Buy Now</button>
+
+
+
+
+    </div>
+
+</div>
+
+
+<!-- 25 -->
+
+<div class="product">
+
+    <img src="apron.jfif"
+         alt="Painting Apron">
+
+    <div class="product-info">
+
+        <h3>Painting Apron</h3>
+
+        <p>
+            Helps protect clothes during painting activities.
+        </p>
+
+        <div class="price">₹150</div>
+
+           <button onclick="addToCart(this)">Buy Now</button>
+
+
+
+
+    </div>
+
+</div>
+
+</div>
+
+</section>
+
+
+</main>
+
+</div>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>© 2026 Pen & Paper | Art & Drawing Supplies</p>
+
+</footer>
+
+<script src="wishlist.js"></script>
+<script src="cart2.js"></script>
+
+</body>
+</html>
